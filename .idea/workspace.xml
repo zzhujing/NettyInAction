@@ -1,0 +1,998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5cf9c455-8556-4b9c-b6c1-f627c4ce9c5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/5.6.2/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyClient$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyClient$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyServer$StudentServiceImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyServer$StudentServiceImpl$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyServer$StudentServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/grpc/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyClient.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyClientHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyClientInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyServer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyServerHandler$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyServerHandler.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/heartbat/MyServerInitializer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyRequest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyRequest$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyRequestOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyResponse$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyResponse$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/MyResponseOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponse$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponse$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponseList$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponseList$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponseList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponseListOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StreamResponseOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceBlockingStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceFutureStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceImplBase.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc$StudentServiceStub.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/StudentServiceGrpc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamRequest$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamRequest$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamRequestOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamResponse$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamResponse$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamResponse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/hujing/netty/proto/TestStreamResponseOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/experimental/authorization_config.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/experimental/experimental.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/main/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/Student.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/experimental/authorization_config.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/experimental/experimental.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/extracted-include-protos/test/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/Student.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponseList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponseListOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StudentProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StudentServiceGrpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/TestStreamRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/TestStreamRequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/TestStreamResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/TestStreamResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/Student.proto" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyInAction" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyInAction" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NettyInAction" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MyRequest</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientInitializer.java" />
+        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/StudentServiceGrpc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/source/StudentServiceGrpc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponseList.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/Student.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StudentServiceGrpc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyServer.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="/usr/local/maven3.6.1" />
+        <option name="userSettingsFile" value="/usr/local/maven3.6.1/conf/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="61" />
+    <option name="y" value="1" />
+    <option name="width" value="2498" />
+    <option name="height" value="1438" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <showMembers ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NettyInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyInAction" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="NettyInAction" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NettyInAction" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.42998353" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.hujing.netty.heartbat" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/hujing/netty/proto" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/hujing/netty/source" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MyClient (1)">
+    <configuration name="MyClient (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.grpc.MyClient" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.heartbat.MyClient" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.heartbat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.grpc.MyClient" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.proto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.grpc.MyServer" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.grpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.heartbat.MyServer" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.heartbat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.hujing.netty.grpc.MyServer" />
+      <module name="NettyInAction.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hujing.netty.proto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyClient (1)" />
+        <item itemvalue="Application.MyServer (1)" />
+        <item itemvalue="Application.MyClient" />
+        <item itemvalue="Application.MyServer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cf9c455-8556-4b9c-b6c1-f627c4ce9c5a" name="Default Changelist" comment="" />
+      <created>1568809866614</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568809866614</updated>
+      <workItem from="1568809869246" duration="7026000" />
+      <workItem from="1568904379532" duration="907000" />
+      <workItem from="1569059656522" duration="1275000" />
+      <workItem from="1569119869789" duration="1648000" />
+      <workItem from="1569121535108" duration="2172000" />
+      <workItem from="1569127463974" duration="601000" />
+      <workItem from="1569131562576" duration="3242000" />
+      <workItem from="1569137193311" duration="5561000" />
+      <workItem from="1569142757017" duration="8197000" />
+      <workItem from="1569154936721" duration="2441000" />
+      <workItem from="1569162167422" duration="504000" />
+      <workItem from="1569164475323" duration="1941000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="35515000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="61" y="1" width="2498" height="1438" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.044390637" visible="true" weight="0.24119574" />
+      <window_info id="Structure" order="1" sideWeight="0.9556094" side_tool="true" weight="0.23382473" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292978" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3849879" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3898305" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292978" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.36803874" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.6577885" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Tail" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" show_stripe_button="false" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24979524" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" weight="0.22276822" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="RestServices" order="10" />
+      <window_info anchor="right" id="Word Book" order="11" side_tool="true" />
+      <window_info anchor="right" id="Translation Assistant" order="12" weight="0.32964784" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="967" column="54" lean-forward="true" selection-start-line="967" selection-start-column="54" selection-end-line="967" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/util/concurrent/EventExecutorGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/EventLoopGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/MultithreadEventLoopGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/nio/NioEventLoopGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding>
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/handler/codec/http/HttpServerCodec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/handler/codec/DelimiterBasedFrameDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2490">
+          <caret line="129" column="11" selection-start-line="129" selection-start-column="11" selection-end-line="129" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/handler/codec/Delimiters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/ChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="33" column="89" selection-start-line="33" selection-start-column="89" selection-end-line="33" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="47" column="74" selection-start-line="47" selection-start-column="74" selection-end-line="47" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/ChannelHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="177" column="25" selection-start-line="177" selection-start-column="25" selection-end-line="177" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/ChannelHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/channel/ChannelOutboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.1.41.Final/6f240a4df8d4bdad06d051ddc016df37cfd06944/netty-all-4.1.41.Final-sources.jar!/io/netty/handler/codec/protobuf/ProtobufDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/gradle-5.6.2/lib/plugins/gradle-build-init-5.6.2.jar!/org/gradle/api/tasks/wrapper/Wrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="305" column="11" selection-start-line="305" selection-start-column="8" selection-end-line="305" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/gradle-5.6.2/lib/gradle-core-api-5.6.2.jar!/org/gradle/api/artifacts/dsl/DependencyHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/heartbat/MyClientInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto.Student.proto" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyRequestOrBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.23.0/b9890ffc37fff23d3fd245ca0544624a3d1fd3a7/grpc-api-1.23.0-sources.jar!/io/grpc/ServerBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="53" lean-forward="true" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StudentProto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.23.0/b9890ffc37fff23d3fd245ca0544624a3d1fd3a7/grpc-api-1.23.0-sources.jar!/io/grpc/ManagedChannelBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="173" column="5" lean-forward="true" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
+          <folding>
+            <element signature="e#6441#6442#0" expanded="true" />
+            <element signature="e#6492#6493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/lang/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="210" column="32" selection-start-line="210" selection-start-column="8" selection-end-line="210" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/lang/ApplicationShutdownHooks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="58" column="41" lean-forward="true" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/jdk1.8/src.zip!/java/util/IdentityHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="430" column="13" selection-start-line="430" selection-start-column="13" selection-end-line="430" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/source/proto/main/grpc/com/hujing/netty/proto/StudentServiceGrpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-435" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StreamResponseList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="138" column="30" lean-forward="true" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+          <folding>
+            <element signature="e#3410#3411#0" expanded="true" />
+            <element signature="e#3442#3443#0" expanded="true" />
+            <element signature="e#24179#24180#0" expanded="true" />
+            <element signature="e#24212#24213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/Student.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="167" column="22" lean-forward="true" selection-start-line="167" selection-start-column="22" selection-end-line="167" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/TestStreamRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding>
+            <element signature="e#667#696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="87" column="54" selection-start-line="87" selection-start-column="54" selection-end-line="87" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3494#3495#0" expanded="true" />
+            <element signature="e#3548#3549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/MyResponseOrBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/proto/StudentServiceGrpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="195" column="7" lean-forward="true" selection-start-line="195" selection-start-column="7" selection-end-line="195" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="847">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hujing/netty/grpc/MyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>main|NettyInAction</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.42998353" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: com.google.android:annotations:4.1.1.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.42998353" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
