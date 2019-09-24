@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+package com.hujing.protobuf;
+
+option java_package = "com.hujing.netty.protobuf";
+option java_outer_classname = "DateInfo";
+
+message OneOfAll{
+
+    enum DataType{
+        EMP = 1;
+        PERSON = 2;
+    }
+
+    required DataType date_type = 1;
+
+    oneof dataBody {
+        Employee employee = 2;
+        Person person = 3;
+    }
+}
+
+
+message Employee {
+    optional string username = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+message Person {
+    optional string username = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
+
+
