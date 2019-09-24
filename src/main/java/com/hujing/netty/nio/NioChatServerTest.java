@@ -38,7 +38,7 @@ public class NioChatServerTest {
 
         for (; ; ) {
 
-            //selector分发
+            //selector等待已经read的Channel
             selector.select();
 
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
@@ -47,6 +47,7 @@ public class NioChatServerTest {
 
                 final SocketChannel client;
 
+                //接受一个新的Socket连接
                 if (selectionKey.isAcceptable()) {
                     ServerSocketChannel serverChannel = (ServerSocketChannel) selectionKey.channel();
                     try {
@@ -60,6 +61,7 @@ public class NioChatServerTest {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    //准备读
                 } else if (selectionKey.isReadable()) {
                     client = ((SocketChannel) selectionKey.channel());
                     ByteBuffer readBuffer = ByteBuffer.allocate(1024);
