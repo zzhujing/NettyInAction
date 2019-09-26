@@ -30,8 +30,6 @@ public class NioChatServerTest {
         serverSocketChannel.bind(new InetSocketAddress(8899));
         serverSocketChannel.configureBlocking(false);
         serverSocketChannel.accept();
-
-
         //2 构建Selector
         Selector selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
