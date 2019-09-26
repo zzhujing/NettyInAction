@@ -10,9 +10,25 @@
  - 分发不通的事件处理器来响应不同类型的IO事件
  
 #### reactor里面的角色模型
-- Dispather : 事件分发
-- Accept : 具体创建Handler
-- Handler : 执行对应的IO事件
+- Reactor (Initiation Dispatcher): 定义一些规范控制事件的调度方式,又提供了Handler的注册方式.
+        会通过同步事件分离器(Nio_Selector)来等待事件发生,一旦发生事件会回调处理器的回调方法 
+        
+- Synchronous Event Demultiplexer (Nio_Selector) : 控制事件分发,调用方调用后会同步阻塞(Selector.select())
+    当有事件被激活的才进行下一步.在Linux中成为io的多路复用机制,比如select,poll,epoll.
+
+- handler : 具体的事件,或是一种资源.比如连接建立,连接取消等.通常为句柄或者文件描述符.
+
+- EventHandler : 处理对应事件的处理器
+
+- ConCreate : 具体事件处理器的实现.
+
+
+#### reactor的实现流程
+
+- Reactor接受EventHandler的注册,EventHandler都包含自己感兴趣的Handler标示
+- Reactor会调用同步事件分发器的同步阻塞方法等待有Handler被激活,并且Reactor会接受到该Handler
+- Reactor根据该Handler会遍历寻找到对应的EventHandler执行回调方法
+- 其中基于Netty的Accept存在的意义是将ParentEventLoopGroup中的连接传递给ChildEventLoopGroup去调度
 
 #### 基于NIO的Reactor实现
 

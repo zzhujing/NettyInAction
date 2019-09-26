@@ -21,10 +21,7 @@ public class TestServer {
         try {
             //2.BootStrap
             ServerBootstrap bootstrap = new ServerBootstrap();
-<<<<<<< HEAD
-            //3.add ChildHandler Initializer
-            bootstrap.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class).childHandler(new TestServerInitliazer());
-=======
+
             //3.add ChildHandler Initliazer
             bootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
@@ -32,7 +29,6 @@ public class TestServer {
                     .childHandler(new TestServerInitliazer());
 
             //初始化Channel并且
->>>>>>> 077df6a0d82ab93052e54d386e6364b45d12ee42
             ChannelFuture channelFuture = bootstrap.bind(8899).sync();
             channelFuture.channel().closeFuture().sync();
             //4.start and shutdown
