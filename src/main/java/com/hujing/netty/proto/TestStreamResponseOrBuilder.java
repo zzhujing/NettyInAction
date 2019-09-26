@@ -10,7 +10,7 @@ public interface TestStreamResponseOrBuilder extends
   /**
    * <code>string resp = 1;</code>
    */
-  java.lang.String getResp();
+  String getResp();
   /**
    * <code>string resp = 1;</code>
    */

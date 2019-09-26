@@ -10,7 +10,7 @@ public interface StreamResponseOrBuilder extends
   /**
    * <code>string city = 1;</code>
    */
-  java.lang.String getCity();
+  String getCity();
   /**
    * <code>string city = 1;</code>
    */

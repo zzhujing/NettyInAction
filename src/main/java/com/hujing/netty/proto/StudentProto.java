@@ -52,7 +52,7 @@ public final class StudentProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\rStudent.proto\022\005proto\"\035\n\tMyRequest\022\020\n\010u" +
       "sername\030\001 \001(\t\"\036\n\nMyResponse\022\020\n\010RealName\030" +
       "\001 \001(\t\",\n\016StreamResponse\022\014\n\004city\030\001 \001(\t\022\014\n" +
@@ -80,37 +80,37 @@ public final class StudentProto {
     internal_static_proto_MyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_MyRequest_descriptor,
-        new java.lang.String[] { "Username", });
+        new String[] { "Username", });
     internal_static_proto_MyResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_proto_MyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_MyResponse_descriptor,
-        new java.lang.String[] { "RealName", });
+        new String[] { "RealName", });
     internal_static_proto_StreamResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_proto_StreamResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_StreamResponse_descriptor,
-        new java.lang.String[] { "City", "Code", });
+        new String[] { "City", "Code", });
     internal_static_proto_StreamResponseList_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_StreamResponseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_StreamResponseList_descriptor,
-        new java.lang.String[] { "StreamResponse", });
+        new String[] { "StreamResponse", });
     internal_static_proto_TestStreamRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_proto_TestStreamRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_TestStreamRequest_descriptor,
-        new java.lang.String[] { "Req", });
+        new String[] { "Req", });
     internal_static_proto_TestStreamResponse_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_TestStreamResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_TestStreamResponse_descriptor,
-        new java.lang.String[] { "Resp", });
+        new String[] { "Resp", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

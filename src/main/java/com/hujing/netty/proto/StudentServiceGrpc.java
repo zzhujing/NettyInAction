@@ -27,29 +27,29 @@ public final class StudentServiceGrpc {
   public static final String SERVICE_NAME = "proto.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest,
-      com.hujing.netty.proto.MyResponse> getGetRealNameByUsernameMethod;
+  private static volatile io.grpc.MethodDescriptor<MyRequest,
+      MyResponse> getGetRealNameByUsernameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetRealNameByUsername",
-      requestType = com.hujing.netty.proto.MyRequest.class,
-      responseType = com.hujing.netty.proto.MyResponse.class,
+      requestType = MyRequest.class,
+      responseType = MyResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest,
-      com.hujing.netty.proto.MyResponse> getGetRealNameByUsernameMethod() {
-    io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest, com.hujing.netty.proto.MyResponse> getGetRealNameByUsernameMethod;
+  public static io.grpc.MethodDescriptor<MyRequest,
+      MyResponse> getGetRealNameByUsernameMethod() {
+    io.grpc.MethodDescriptor<MyRequest, MyResponse> getGetRealNameByUsernameMethod;
     if ((getGetRealNameByUsernameMethod = StudentServiceGrpc.getGetRealNameByUsernameMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetRealNameByUsernameMethod = StudentServiceGrpc.getGetRealNameByUsernameMethod) == null) {
           StudentServiceGrpc.getGetRealNameByUsernameMethod = getGetRealNameByUsernameMethod =
-              io.grpc.MethodDescriptor.<com.hujing.netty.proto.MyRequest, com.hujing.netty.proto.MyResponse>newBuilder()
+              io.grpc.MethodDescriptor.<MyRequest, MyResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRealNameByUsername"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.MyRequest.getDefaultInstance()))
+                  MyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.MyResponse.getDefaultInstance()))
+                  MyResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetRealNameByUsername"))
               .build();
         }
@@ -58,29 +58,29 @@ public final class StudentServiceGrpc {
     return getGetRealNameByUsernameMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest,
-      com.hujing.netty.proto.StreamResponse> getGetStreamResponseByUsernameMethod;
+  private static volatile io.grpc.MethodDescriptor<MyRequest,
+      StreamResponse> getGetStreamResponseByUsernameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetStreamResponseByUsername",
-      requestType = com.hujing.netty.proto.MyRequest.class,
-      responseType = com.hujing.netty.proto.StreamResponse.class,
+      requestType = MyRequest.class,
+      responseType = StreamResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest,
-      com.hujing.netty.proto.StreamResponse> getGetStreamResponseByUsernameMethod() {
-    io.grpc.MethodDescriptor<com.hujing.netty.proto.MyRequest, com.hujing.netty.proto.StreamResponse> getGetStreamResponseByUsernameMethod;
+  public static io.grpc.MethodDescriptor<MyRequest,
+      StreamResponse> getGetStreamResponseByUsernameMethod() {
+    io.grpc.MethodDescriptor<MyRequest, StreamResponse> getGetStreamResponseByUsernameMethod;
     if ((getGetStreamResponseByUsernameMethod = StudentServiceGrpc.getGetStreamResponseByUsernameMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetStreamResponseByUsernameMethod = StudentServiceGrpc.getGetStreamResponseByUsernameMethod) == null) {
           StudentServiceGrpc.getGetStreamResponseByUsernameMethod = getGetStreamResponseByUsernameMethod =
-              io.grpc.MethodDescriptor.<com.hujing.netty.proto.MyRequest, com.hujing.netty.proto.StreamResponse>newBuilder()
+              io.grpc.MethodDescriptor.<MyRequest, StreamResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStreamResponseByUsername"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.MyRequest.getDefaultInstance()))
+                  MyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.StreamResponse.getDefaultInstance()))
+                  StreamResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStreamResponseByUsername"))
               .build();
         }
@@ -89,29 +89,29 @@ public final class StudentServiceGrpc {
     return getGetStreamResponseByUsernameMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hujing.netty.proto.StreamResponse,
-      com.hujing.netty.proto.StreamResponseList> getSendStreamRequestMethod;
+  private static volatile io.grpc.MethodDescriptor<StreamResponse,
+      StreamResponseList> getSendStreamRequestMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendStreamRequest",
-      requestType = com.hujing.netty.proto.StreamResponse.class,
-      responseType = com.hujing.netty.proto.StreamResponseList.class,
+      requestType = StreamResponse.class,
+      responseType = StreamResponseList.class,
       methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
-  public static io.grpc.MethodDescriptor<com.hujing.netty.proto.StreamResponse,
-      com.hujing.netty.proto.StreamResponseList> getSendStreamRequestMethod() {
-    io.grpc.MethodDescriptor<com.hujing.netty.proto.StreamResponse, com.hujing.netty.proto.StreamResponseList> getSendStreamRequestMethod;
+  public static io.grpc.MethodDescriptor<StreamResponse,
+      StreamResponseList> getSendStreamRequestMethod() {
+    io.grpc.MethodDescriptor<StreamResponse, StreamResponseList> getSendStreamRequestMethod;
     if ((getSendStreamRequestMethod = StudentServiceGrpc.getSendStreamRequestMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getSendStreamRequestMethod = StudentServiceGrpc.getSendStreamRequestMethod) == null) {
           StudentServiceGrpc.getSendStreamRequestMethod = getSendStreamRequestMethod =
-              io.grpc.MethodDescriptor.<com.hujing.netty.proto.StreamResponse, com.hujing.netty.proto.StreamResponseList>newBuilder()
+              io.grpc.MethodDescriptor.<StreamResponse, StreamResponseList>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendStreamRequest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.StreamResponse.getDefaultInstance()))
+                  StreamResponse.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.StreamResponseList.getDefaultInstance()))
+                  StreamResponseList.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("SendStreamRequest"))
               .build();
         }
@@ -120,27 +120,27 @@ public final class StudentServiceGrpc {
     return getSendStreamRequestMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.hujing.netty.proto.TestStreamRequest,
+  private static volatile io.grpc.MethodDescriptor<TestStreamRequest,
       com.hujing.netty.proto.TestStreamResponse> getSendStreamRequestAndGetResponseMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendStreamRequestAndGetResponse",
-      requestType = com.hujing.netty.proto.TestStreamRequest.class,
+      requestType = TestStreamRequest.class,
       responseType = com.hujing.netty.proto.TestStreamResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
-  public static io.grpc.MethodDescriptor<com.hujing.netty.proto.TestStreamRequest,
+  public static io.grpc.MethodDescriptor<TestStreamRequest,
       com.hujing.netty.proto.TestStreamResponse> getSendStreamRequestAndGetResponseMethod() {
-    io.grpc.MethodDescriptor<com.hujing.netty.proto.TestStreamRequest, com.hujing.netty.proto.TestStreamResponse> getSendStreamRequestAndGetResponseMethod;
+    io.grpc.MethodDescriptor<TestStreamRequest, com.hujing.netty.proto.TestStreamResponse> getSendStreamRequestAndGetResponseMethod;
     if ((getSendStreamRequestAndGetResponseMethod = StudentServiceGrpc.getSendStreamRequestAndGetResponseMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getSendStreamRequestAndGetResponseMethod = StudentServiceGrpc.getSendStreamRequestAndGetResponseMethod) == null) {
           StudentServiceGrpc.getSendStreamRequestAndGetResponseMethod = getSendStreamRequestAndGetResponseMethod =
-              io.grpc.MethodDescriptor.<com.hujing.netty.proto.TestStreamRequest, com.hujing.netty.proto.TestStreamResponse>newBuilder()
+              io.grpc.MethodDescriptor.<TestStreamRequest, com.hujing.netty.proto.TestStreamResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.BIDI_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendStreamRequestAndGetResponse"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.hujing.netty.proto.TestStreamRequest.getDefaultInstance()))
+                  TestStreamRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.hujing.netty.proto.TestStreamResponse.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("SendStreamRequestAndGetResponse"))
@@ -180,60 +180,60 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUsername(com.hujing.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.MyResponse> responseObserver) {
+    public void getRealNameByUsername(MyRequest request,
+                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetRealNameByUsernameMethod(), responseObserver);
     }
 
     /**
      */
-    public void getStreamResponseByUsername(com.hujing.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponse> responseObserver) {
+    public void getStreamResponseByUsername(MyRequest request,
+                                            io.grpc.stub.StreamObserver<StreamResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGetStreamResponseByUsernameMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponse> sendStreamRequest(
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponseList> responseObserver) {
+    public io.grpc.stub.StreamObserver<StreamResponse> sendStreamRequest(
+        io.grpc.stub.StreamObserver<StreamResponseList> responseObserver) {
       return asyncUnimplementedStreamingCall(getSendStreamRequestMethod(), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.hujing.netty.proto.TestStreamRequest> sendStreamRequestAndGetResponse(
+    public io.grpc.stub.StreamObserver<TestStreamRequest> sendStreamRequestAndGetResponse(
         io.grpc.stub.StreamObserver<com.hujing.netty.proto.TestStreamResponse> responseObserver) {
       return asyncUnimplementedStreamingCall(getSendStreamRequestAndGetResponseMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetRealNameByUsernameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.hujing.netty.proto.MyRequest,
-                com.hujing.netty.proto.MyResponse>(
+                MyRequest,
+                MyResponse>(
                   this, METHODID_GET_REAL_NAME_BY_USERNAME)))
           .addMethod(
             getGetStreamResponseByUsernameMethod(),
             asyncServerStreamingCall(
               new MethodHandlers<
-                com.hujing.netty.proto.MyRequest,
-                com.hujing.netty.proto.StreamResponse>(
+                MyRequest,
+                StreamResponse>(
                   this, METHODID_GET_STREAM_RESPONSE_BY_USERNAME)))
           .addMethod(
             getSendStreamRequestMethod(),
             asyncClientStreamingCall(
               new MethodHandlers<
-                com.hujing.netty.proto.StreamResponse,
-                com.hujing.netty.proto.StreamResponseList>(
+                StreamResponse,
+                StreamResponseList>(
                   this, METHODID_SEND_STREAM_REQUEST)))
           .addMethod(
             getSendStreamRequestAndGetResponseMethod(),
             asyncBidiStreamingCall(
               new MethodHandlers<
-                com.hujing.netty.proto.TestStreamRequest,
+                TestStreamRequest,
                 com.hujing.netty.proto.TestStreamResponse>(
                   this, METHODID_SEND_STREAM_REQUEST_AND_GET_RESPONSE)))
           .build();
@@ -252,7 +252,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected StudentServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceStub(channel, callOptions);
@@ -260,31 +260,31 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUsername(com.hujing.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.MyResponse> responseObserver) {
+    public void getRealNameByUsername(MyRequest request,
+                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetRealNameByUsernameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void getStreamResponseByUsername(com.hujing.netty.proto.MyRequest request,
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponse> responseObserver) {
+    public void getStreamResponseByUsername(MyRequest request,
+                                            io.grpc.stub.StreamObserver<StreamResponse> responseObserver) {
       asyncServerStreamingCall(
           getChannel().newCall(getGetStreamResponseByUsernameMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponse> sendStreamRequest(
-        io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponseList> responseObserver) {
+    public io.grpc.stub.StreamObserver<StreamResponse> sendStreamRequest(
+        io.grpc.stub.StreamObserver<StreamResponseList> responseObserver) {
       return asyncClientStreamingCall(
           getChannel().newCall(getSendStreamRequestMethod(), getCallOptions()), responseObserver);
     }
 
     /**
      */
-    public io.grpc.stub.StreamObserver<com.hujing.netty.proto.TestStreamRequest> sendStreamRequestAndGetResponse(
+    public io.grpc.stub.StreamObserver<TestStreamRequest> sendStreamRequestAndGetResponse(
         io.grpc.stub.StreamObserver<com.hujing.netty.proto.TestStreamResponse> responseObserver) {
       return asyncBidiStreamingCall(
           getChannel().newCall(getSendStreamRequestAndGetResponseMethod(), getCallOptions()), responseObserver);
@@ -303,7 +303,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected StudentServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceBlockingStub(channel, callOptions);
@@ -311,15 +311,15 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.hujing.netty.proto.MyResponse getRealNameByUsername(com.hujing.netty.proto.MyRequest request) {
+    public MyResponse getRealNameByUsername(MyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetRealNameByUsernameMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public java.util.Iterator<com.hujing.netty.proto.StreamResponse> getStreamResponseByUsername(
-        com.hujing.netty.proto.MyRequest request) {
+    public java.util.Iterator<StreamResponse> getStreamResponseByUsername(
+        MyRequest request) {
       return blockingServerStreamingCall(
           getChannel(), getGetStreamResponseByUsernameMethod(), getCallOptions(), request);
     }
@@ -337,7 +337,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected StudentServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new StudentServiceFutureStub(channel, callOptions);
@@ -345,8 +345,8 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.hujing.netty.proto.MyResponse> getRealNameByUsername(
-        com.hujing.netty.proto.MyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<MyResponse> getRealNameByUsername(
+        MyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetRealNameByUsernameMethod(), getCallOptions()), request);
     }
@@ -370,31 +370,31 @@ public final class StudentServiceGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_REAL_NAME_BY_USERNAME:
-          serviceImpl.getRealNameByUsername((com.hujing.netty.proto.MyRequest) request,
-              (io.grpc.stub.StreamObserver<com.hujing.netty.proto.MyResponse>) responseObserver);
+          serviceImpl.getRealNameByUsername((MyRequest) request,
+              (io.grpc.stub.StreamObserver<MyResponse>) responseObserver);
           break;
         case METHODID_GET_STREAM_RESPONSE_BY_USERNAME:
-          serviceImpl.getStreamResponseByUsername((com.hujing.netty.proto.MyRequest) request,
-              (io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponse>) responseObserver);
+          serviceImpl.getStreamResponseByUsername((MyRequest) request,
+              (io.grpc.stub.StreamObserver<StreamResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SEND_STREAM_REQUEST:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendStreamRequest(
-              (io.grpc.stub.StreamObserver<com.hujing.netty.proto.StreamResponseList>) responseObserver);
+              (io.grpc.stub.StreamObserver<StreamResponseList>) responseObserver);
         case METHODID_SEND_STREAM_REQUEST_AND_GET_RESPONSE:
           return (io.grpc.stub.StreamObserver<Req>) serviceImpl.sendStreamRequestAndGetResponse(
               (io.grpc.stub.StreamObserver<com.hujing.netty.proto.TestStreamResponse>) responseObserver);
@@ -408,12 +408,12 @@ public final class StudentServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     StudentServiceBaseDescriptorSupplier() {}
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.hujing.netty.proto.StudentProto.getDescriptor();
+      return StudentProto.getDescriptor();
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("StudentService");
     }
@@ -433,7 +433,7 @@ public final class StudentServiceGrpc {
       this.methodName = methodName;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }

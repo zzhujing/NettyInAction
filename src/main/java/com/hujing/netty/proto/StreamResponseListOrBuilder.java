@@ -10,12 +10,12 @@ public interface StreamResponseListOrBuilder extends
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  java.util.List<com.hujing.netty.proto.StreamResponse> 
+  java.util.List<StreamResponse>
       getStreamResponseList();
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  com.hujing.netty.proto.StreamResponse getStreamResponse(int index);
+  StreamResponse getStreamResponse(int index);
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
@@ -23,11 +23,11 @@ public interface StreamResponseListOrBuilder extends
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  java.util.List<? extends com.hujing.netty.proto.StreamResponseOrBuilder> 
+  java.util.List<? extends StreamResponseOrBuilder>
       getStreamResponseOrBuilderList();
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  com.hujing.netty.proto.StreamResponseOrBuilder getStreamResponseOrBuilder(
-      int index);
+  StreamResponseOrBuilder getStreamResponseOrBuilder(
+          int index);
 }

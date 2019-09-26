@@ -19,14 +19,14 @@ private static final long serialVersionUID = 0L;
     req_ = "";
   }
 
-  @java.lang.Override
+  @Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
+  protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new TestStreamRequest();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException();
     }
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
+            String s = input.readStringRequireUtf8();
 
             req_ = s;
             break;
@@ -76,30 +76,30 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hujing.netty.proto.StudentProto.internal_static_proto_TestStreamRequest_descriptor;
+    return StudentProto.internal_static_proto_TestStreamRequest_descriptor;
   }
 
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  @Override
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hujing.netty.proto.StudentProto.internal_static_proto_TestStreamRequest_fieldAccessorTable
+    return StudentProto.internal_static_proto_TestStreamRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hujing.netty.proto.TestStreamRequest.class, com.hujing.netty.proto.TestStreamRequest.Builder.class);
+            TestStreamRequest.class, Builder.class);
   }
 
   public static final int REQ_FIELD_NUMBER = 1;
-  private volatile java.lang.Object req_;
+  private volatile Object req_;
   /**
    * <code>string req = 1;</code>
    */
-  public java.lang.String getReq() {
-    java.lang.Object ref = req_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
+  public String getReq() {
+    Object ref = req_;
+    if (ref instanceof String) {
+      return (String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
+      String s = bs.toStringUtf8();
       req_ = s;
       return s;
     }
@@ -109,11 +109,11 @@ private static final long serialVersionUID = 0L;
    */
   public com.google.protobuf.ByteString
       getReqBytes() {
-    java.lang.Object ref = req_;
-    if (ref instanceof java.lang.String) {
+    Object ref = req_;
+    if (ref instanceof String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
+              (String) ref);
       req_ = b;
       return b;
     } else {
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
+  @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!getReqBytes().isEmpty()) {
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
+  @Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -155,15 +155,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hujing.netty.proto.TestStreamRequest)) {
+    if (!(obj instanceof TestStreamRequest)) {
       return super.equals(obj);
     }
-    com.hujing.netty.proto.TestStreamRequest other = (com.hujing.netty.proto.TestStreamRequest) obj;
+    TestStreamRequest other = (TestStreamRequest) obj;
 
     if (!getReq()
         .equals(other.getReq())) return false;
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -185,69 +185,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(byte[] data)
+  public static TestStreamRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(java.io.InputStream input)
+  public static TestStreamRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseDelimitedFrom(java.io.InputStream input)
+  public static TestStreamRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseDelimitedFrom(
+  public static TestStreamRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.TestStreamRequest parseFrom(
+  public static TestStreamRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -255,23 +255,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
+  @Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hujing.netty.proto.TestStreamRequest prototype) {
+  public static Builder newBuilder(TestStreamRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
+  @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -284,15 +284,15 @@ private static final long serialVersionUID = 0L;
       com.hujing.netty.proto.TestStreamRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_TestStreamRequest_descriptor;
+      return StudentProto.internal_static_proto_TestStreamRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_TestStreamRequest_fieldAccessorTable
+      return StudentProto.internal_static_proto_TestStreamRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hujing.netty.proto.TestStreamRequest.class, com.hujing.netty.proto.TestStreamRequest.Builder.class);
+              TestStreamRequest.class, Builder.class);
     }
 
     // Construct using com.hujing.netty.proto.TestStreamRequest.newBuilder()
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
       }
     }
-    @java.lang.Override
+    @Override
     public Builder clear() {
       super.clear();
       req_ = "";
@@ -318,78 +318,78 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_TestStreamRequest_descriptor;
+      return StudentProto.internal_static_proto_TestStreamRequest_descriptor;
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.TestStreamRequest getDefaultInstanceForType() {
-      return com.hujing.netty.proto.TestStreamRequest.getDefaultInstance();
+    @Override
+    public TestStreamRequest getDefaultInstanceForType() {
+      return TestStreamRequest.getDefaultInstance();
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.TestStreamRequest build() {
-      com.hujing.netty.proto.TestStreamRequest result = buildPartial();
+    @Override
+    public TestStreamRequest build() {
+      TestStreamRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.TestStreamRequest buildPartial() {
-      com.hujing.netty.proto.TestStreamRequest result = new com.hujing.netty.proto.TestStreamRequest(this);
+    @Override
+    public TestStreamRequest buildPartial() {
+      TestStreamRequest result = new TestStreamRequest(this);
       result.req_ = req_;
       onBuilt();
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public Builder clone() {
       return super.clone();
     }
-    @java.lang.Override
+    @Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.setField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @java.lang.Override
+    @Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @java.lang.Override
+    @Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
+    @Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.addRepeatedField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hujing.netty.proto.TestStreamRequest) {
-        return mergeFrom((com.hujing.netty.proto.TestStreamRequest)other);
+      if (other instanceof TestStreamRequest) {
+        return mergeFrom((TestStreamRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hujing.netty.proto.TestStreamRequest other) {
-      if (other == com.hujing.netty.proto.TestStreamRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(TestStreamRequest other) {
+      if (other == TestStreamRequest.getDefaultInstance()) return this;
       if (!other.getReq().isEmpty()) {
         req_ = other.req_;
         onChanged();
@@ -399,21 +399,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.hujing.netty.proto.TestStreamRequest parsedMessage = null;
+      TestStreamRequest parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.hujing.netty.proto.TestStreamRequest) e.getUnfinishedMessage();
+        parsedMessage = (TestStreamRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -423,20 +423,20 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object req_ = "";
+    private Object req_ = "";
     /**
      * <code>string req = 1;</code>
      */
-    public java.lang.String getReq() {
-      java.lang.Object ref = req_;
-      if (!(ref instanceof java.lang.String)) {
+    public String getReq() {
+      Object ref = req_;
+      if (!(ref instanceof String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         req_ = s;
         return s;
       } else {
-        return (java.lang.String) ref;
+        return (String) ref;
       }
     }
     /**
@@ -444,11 +444,11 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ByteString
         getReqBytes() {
-      java.lang.Object ref = req_;
+      Object ref = req_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         req_ = b;
         return b;
       } else {
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
      * <code>string req = 1;</code>
      */
     public Builder setReq(
-        java.lang.String value) {
+        String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -491,13 +491,13 @@ private static final long serialVersionUID = 0L;
       onChanged();
       return this;
     }
-    @java.lang.Override
+    @Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -508,18 +508,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:proto.TestStreamRequest)
-  private static final com.hujing.netty.proto.TestStreamRequest DEFAULT_INSTANCE;
+  private static final TestStreamRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hujing.netty.proto.TestStreamRequest();
+    DEFAULT_INSTANCE = new TestStreamRequest();
   }
 
-  public static com.hujing.netty.proto.TestStreamRequest getDefaultInstance() {
+  public static TestStreamRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<TestStreamRequest>
       PARSER = new com.google.protobuf.AbstractParser<TestStreamRequest>() {
-    @java.lang.Override
+    @Override
     public TestStreamRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -532,13 +532,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<TestStreamRequest> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
-  public com.hujing.netty.proto.TestStreamRequest getDefaultInstanceForType() {
+  @Override
+  public TestStreamRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

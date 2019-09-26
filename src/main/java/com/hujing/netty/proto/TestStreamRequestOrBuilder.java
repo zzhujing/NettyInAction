@@ -10,7 +10,7 @@ public interface TestStreamRequestOrBuilder extends
   /**
    * <code>string req = 1;</code>
    */
-  java.lang.String getReq();
+  String getReq();
   /**
    * <code>string req = 1;</code>
    */

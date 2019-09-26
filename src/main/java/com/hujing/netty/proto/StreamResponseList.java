@@ -19,14 +19,14 @@ private static final long serialVersionUID = 0L;
     streamResponse_ = java.util.Collections.emptyList();
   }
 
-  @java.lang.Override
+  @Override
   @SuppressWarnings({"unused"})
-  protected java.lang.Object newInstance(
+  protected Object newInstance(
       UnusedPrivateParameter unused) {
     return new StreamResponseList();
   }
 
-  @java.lang.Override
+  @Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
@@ -37,7 +37,7 @@ private static final long serialVersionUID = 0L;
       throws com.google.protobuf.InvalidProtocolBufferException {
     this();
     if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException();
     }
     int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -52,11 +52,11 @@ private static final long serialVersionUID = 0L;
             break;
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              streamResponse_ = new java.util.ArrayList<com.hujing.netty.proto.StreamResponse>();
+              streamResponse_ = new java.util.ArrayList<StreamResponse>();
               mutable_bitField0_ |= 0x00000001;
             }
             streamResponse_.add(
-                input.readMessage(com.hujing.netty.proto.StreamResponse.parser(), extensionRegistry));
+                input.readMessage(StreamResponse.parser(), extensionRegistry));
             break;
           }
           default: {
@@ -83,23 +83,23 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.hujing.netty.proto.StudentProto.internal_static_proto_StreamResponseList_descriptor;
+    return StudentProto.internal_static_proto_StreamResponseList_descriptor;
   }
 
-  @java.lang.Override
-  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+  @Override
+  protected FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.hujing.netty.proto.StudentProto.internal_static_proto_StreamResponseList_fieldAccessorTable
+    return StudentProto.internal_static_proto_StreamResponseList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.hujing.netty.proto.StreamResponseList.class, com.hujing.netty.proto.StreamResponseList.Builder.class);
+            StreamResponseList.class, Builder.class);
   }
 
   public static final int STREAMRESPONSE_FIELD_NUMBER = 1;
-  private java.util.List<com.hujing.netty.proto.StreamResponse> streamResponse_;
+  private java.util.List<StreamResponse> streamResponse_;
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  public java.util.List<com.hujing.netty.proto.StreamResponse> getStreamResponseList() {
+  public java.util.List<StreamResponse> getStreamResponseList() {
     return streamResponse_;
   }
   /**
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
    */
-  public com.hujing.netty.proto.StreamResponse getStreamResponse(int index) {
+  public StreamResponse getStreamResponse(int index) {
     return streamResponse_.get(index);
   }
   /**
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
   }
 
   private byte memoizedIsInitialized = -1;
-  @java.lang.Override
+  @Override
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
     if (isInitialized == 1) return true;
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     for (int i = 0; i < streamResponse_.size(); i++) {
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
     unknownFields.writeTo(output);
   }
 
-  @java.lang.Override
+  @Override
   public int getSerializedSize() {
     int size = memoizedSize;
     if (size != -1) return size;
@@ -164,15 +164,15 @@ private static final long serialVersionUID = 0L;
     return size;
   }
 
-  @java.lang.Override
-  public boolean equals(final java.lang.Object obj) {
+  @Override
+  public boolean equals(final Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.hujing.netty.proto.StreamResponseList)) {
+    if (!(obj instanceof StreamResponseList)) {
       return super.equals(obj);
     }
-    com.hujing.netty.proto.StreamResponseList other = (com.hujing.netty.proto.StreamResponseList) obj;
+    StreamResponseList other = (StreamResponseList) obj;
 
     if (!getStreamResponseList()
         .equals(other.getStreamResponseList())) return false;
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
     return true;
   }
 
-  @java.lang.Override
+  @Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -196,69 +196,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(byte[] data)
+  public static StreamResponseList parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(java.io.InputStream input)
+  public static StreamResponseList parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseDelimitedFrom(java.io.InputStream input)
+  public static StreamResponseList parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseDelimitedFrom(
+  public static StreamResponseList parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.hujing.netty.proto.StreamResponseList parseFrom(
+  public static StreamResponseList parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -266,23 +266,23 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  @java.lang.Override
+  @Override
   public Builder newBuilderForType() { return newBuilder(); }
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.hujing.netty.proto.StreamResponseList prototype) {
+  public static Builder newBuilder(StreamResponseList prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
-  @java.lang.Override
+  @Override
   public Builder toBuilder() {
     return this == DEFAULT_INSTANCE
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @java.lang.Override
+  @Override
   protected Builder newBuilderForType(
-      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -295,15 +295,15 @@ private static final long serialVersionUID = 0L;
       com.hujing.netty.proto.StreamResponseListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_StreamResponseList_descriptor;
+      return StudentProto.internal_static_proto_StreamResponseList_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_StreamResponseList_fieldAccessorTable
+      return StudentProto.internal_static_proto_StreamResponseList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.hujing.netty.proto.StreamResponseList.class, com.hujing.netty.proto.StreamResponseList.Builder.class);
+              StreamResponseList.class, Builder.class);
     }
 
     // Construct using com.hujing.netty.proto.StreamResponseList.newBuilder()
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
     }
 
     private Builder(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
         getStreamResponseFieldBuilder();
       }
     }
-    @java.lang.Override
+    @Override
     public Builder clear() {
       super.clear();
       if (streamResponseBuilder_ == null) {
@@ -334,29 +334,29 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.hujing.netty.proto.StudentProto.internal_static_proto_StreamResponseList_descriptor;
+      return StudentProto.internal_static_proto_StreamResponseList_descriptor;
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.StreamResponseList getDefaultInstanceForType() {
-      return com.hujing.netty.proto.StreamResponseList.getDefaultInstance();
+    @Override
+    public StreamResponseList getDefaultInstanceForType() {
+      return StreamResponseList.getDefaultInstance();
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.StreamResponseList build() {
-      com.hujing.netty.proto.StreamResponseList result = buildPartial();
+    @Override
+    public StreamResponseList build() {
+      StreamResponseList result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    @java.lang.Override
-    public com.hujing.netty.proto.StreamResponseList buildPartial() {
-      com.hujing.netty.proto.StreamResponseList result = new com.hujing.netty.proto.StreamResponseList(this);
+    @Override
+    public StreamResponseList buildPartial() {
+      StreamResponseList result = new StreamResponseList(this);
       int from_bitField0_ = bitField0_;
       if (streamResponseBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -371,50 +371,50 @@ private static final long serialVersionUID = 0L;
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public Builder clone() {
       return super.clone();
     }
-    @java.lang.Override
+    @Override
     public Builder setField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.setField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder clearField(
         com.google.protobuf.Descriptors.FieldDescriptor field) {
       return super.clearField(field);
     }
-    @java.lang.Override
+    @Override
     public Builder clearOneof(
         com.google.protobuf.Descriptors.OneofDescriptor oneof) {
       return super.clearOneof(oneof);
     }
-    @java.lang.Override
+    @Override
     public Builder setRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        int index, java.lang.Object value) {
+        int index, Object value) {
       return super.setRepeatedField(field, index, value);
     }
-    @java.lang.Override
+    @Override
     public Builder addRepeatedField(
         com.google.protobuf.Descriptors.FieldDescriptor field,
-        java.lang.Object value) {
+        Object value) {
       return super.addRepeatedField(field, value);
     }
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.hujing.netty.proto.StreamResponseList) {
-        return mergeFrom((com.hujing.netty.proto.StreamResponseList)other);
+      if (other instanceof StreamResponseList) {
+        return mergeFrom((StreamResponseList)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.hujing.netty.proto.StreamResponseList other) {
-      if (other == com.hujing.netty.proto.StreamResponseList.getDefaultInstance()) return this;
+    public Builder mergeFrom(StreamResponseList other) {
+      if (other == StreamResponseList.getDefaultInstance()) return this;
       if (streamResponseBuilder_ == null) {
         if (!other.streamResponse_.isEmpty()) {
           if (streamResponse_.isEmpty()) {
@@ -446,21 +446,21 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public Builder mergeFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.hujing.netty.proto.StreamResponseList parsedMessage = null;
+      StreamResponseList parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.hujing.netty.proto.StreamResponseList) e.getUnfinishedMessage();
+        parsedMessage = (StreamResponseList) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -471,22 +471,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.hujing.netty.proto.StreamResponse> streamResponse_ =
+    private java.util.List<StreamResponse> streamResponse_ =
       java.util.Collections.emptyList();
     private void ensureStreamResponseIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        streamResponse_ = new java.util.ArrayList<com.hujing.netty.proto.StreamResponse>(streamResponse_);
+        streamResponse_ = new java.util.ArrayList<StreamResponse>(streamResponse_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.hujing.netty.proto.StreamResponse, com.hujing.netty.proto.StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder> streamResponseBuilder_;
+        StreamResponse, StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder> streamResponseBuilder_;
 
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public java.util.List<com.hujing.netty.proto.StreamResponse> getStreamResponseList() {
+    public java.util.List<StreamResponse> getStreamResponseList() {
       if (streamResponseBuilder_ == null) {
         return java.util.Collections.unmodifiableList(streamResponse_);
       } else {
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public com.hujing.netty.proto.StreamResponse getStreamResponse(int index) {
+    public StreamResponse getStreamResponse(int index) {
       if (streamResponseBuilder_ == null) {
         return streamResponse_.get(index);
       } else {
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder setStreamResponse(
-        int index, com.hujing.netty.proto.StreamResponse value) {
+        int index, StreamResponse value) {
       if (streamResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder setStreamResponse(
-        int index, com.hujing.netty.proto.StreamResponse.Builder builderForValue) {
+        int index, StreamResponse.Builder builderForValue) {
       if (streamResponseBuilder_ == null) {
         ensureStreamResponseIsMutable();
         streamResponse_.set(index, builderForValue.build());
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public Builder addStreamResponse(com.hujing.netty.proto.StreamResponse value) {
+    public Builder addStreamResponse(StreamResponse value) {
       if (streamResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder addStreamResponse(
-        int index, com.hujing.netty.proto.StreamResponse value) {
+        int index, StreamResponse value) {
       if (streamResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder addStreamResponse(
-        com.hujing.netty.proto.StreamResponse.Builder builderForValue) {
+        StreamResponse.Builder builderForValue) {
       if (streamResponseBuilder_ == null) {
         ensureStreamResponseIsMutable();
         streamResponse_.add(builderForValue.build());
@@ -595,7 +595,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder addStreamResponse(
-        int index, com.hujing.netty.proto.StreamResponse.Builder builderForValue) {
+        int index, StreamResponse.Builder builderForValue) {
       if (streamResponseBuilder_ == null) {
         ensureStreamResponseIsMutable();
         streamResponse_.add(index, builderForValue.build());
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
     public Builder addAllStreamResponse(
-        java.lang.Iterable<? extends com.hujing.netty.proto.StreamResponse> values) {
+        Iterable<? extends StreamResponse> values) {
       if (streamResponseBuilder_ == null) {
         ensureStreamResponseIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public com.hujing.netty.proto.StreamResponse.Builder getStreamResponseBuilder(
+    public StreamResponse.Builder getStreamResponseBuilder(
         int index) {
       return getStreamResponseFieldBuilder().getBuilder(index);
     }
@@ -677,31 +677,31 @@ private static final long serialVersionUID = 0L;
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public com.hujing.netty.proto.StreamResponse.Builder addStreamResponseBuilder() {
+    public StreamResponse.Builder addStreamResponseBuilder() {
       return getStreamResponseFieldBuilder().addBuilder(
-          com.hujing.netty.proto.StreamResponse.getDefaultInstance());
+          StreamResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public com.hujing.netty.proto.StreamResponse.Builder addStreamResponseBuilder(
+    public StreamResponse.Builder addStreamResponseBuilder(
         int index) {
       return getStreamResponseFieldBuilder().addBuilder(
-          index, com.hujing.netty.proto.StreamResponse.getDefaultInstance());
+          index, StreamResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .proto.StreamResponse streamResponse = 1;</code>
      */
-    public java.util.List<com.hujing.netty.proto.StreamResponse.Builder> 
+    public java.util.List<StreamResponse.Builder>
          getStreamResponseBuilderList() {
       return getStreamResponseFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.hujing.netty.proto.StreamResponse, com.hujing.netty.proto.StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder> 
+        StreamResponse, StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder>
         getStreamResponseFieldBuilder() {
       if (streamResponseBuilder_ == null) {
         streamResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.hujing.netty.proto.StreamResponse, com.hujing.netty.proto.StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder>(
+            StreamResponse, StreamResponse.Builder, com.hujing.netty.proto.StreamResponseOrBuilder>(
                 streamResponse_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
@@ -710,13 +710,13 @@ private static final long serialVersionUID = 0L;
       }
       return streamResponseBuilder_;
     }
-    @java.lang.Override
+    @Override
     public final Builder setUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.setUnknownFields(unknownFields);
     }
 
-    @java.lang.Override
+    @Override
     public final Builder mergeUnknownFields(
         final com.google.protobuf.UnknownFieldSet unknownFields) {
       return super.mergeUnknownFields(unknownFields);
@@ -727,18 +727,18 @@ private static final long serialVersionUID = 0L;
   }
 
   // @@protoc_insertion_point(class_scope:proto.StreamResponseList)
-  private static final com.hujing.netty.proto.StreamResponseList DEFAULT_INSTANCE;
+  private static final StreamResponseList DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.hujing.netty.proto.StreamResponseList();
+    DEFAULT_INSTANCE = new StreamResponseList();
   }
 
-  public static com.hujing.netty.proto.StreamResponseList getDefaultInstance() {
+  public static StreamResponseList getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
   private static final com.google.protobuf.Parser<StreamResponseList>
       PARSER = new com.google.protobuf.AbstractParser<StreamResponseList>() {
-    @java.lang.Override
+    @Override
     public StreamResponseList parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -751,13 +751,13 @@ private static final long serialVersionUID = 0L;
     return PARSER;
   }
 
-  @java.lang.Override
+  @Override
   public com.google.protobuf.Parser<StreamResponseList> getParserForType() {
     return PARSER;
   }
 
-  @java.lang.Override
-  public com.hujing.netty.proto.StreamResponseList getDefaultInstanceForType() {
+  @Override
+  public StreamResponseList getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
