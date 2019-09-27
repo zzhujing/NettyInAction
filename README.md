@@ -26,7 +26,7 @@
 #### reactor的实现流程
 
 - Reactor接受EventHandler的注册,EventHandler都包含自己感兴趣的Handler标示
-- Reactor会调用同步事件分发器的同步阻塞方法等待有Handler被激活,并且Reactor会接受到该Handler
+- Reactor会调用同步事件分发器的同步阻塞方法等待有Handler被激活,并且Reactor会接收到回调的Handler
 - Reactor根据该Handler会遍历寻找到对应的EventHandler执行回调方法
 - 其中基于Netty的Accept存在的意义是将ParentEventLoopGroup中的连接传递给ChildEventLoopGroup去调度
 
@@ -121,4 +121,58 @@ class Handler continued
 
 ```
 
-#### netty在创建Channel的时候机会创建字符缓冲区，并且根据是否有Unsafe包来判断采用堆外零拷贝还是堆内缓冲区
+> netty在创建Channel的时候机会创建字符缓冲区，并且根据是否有Unsafe包来判断采用堆外零拷贝还是堆内缓冲区
+
+#### Channel
+
+- 是一个`network socket`连接点，可以对`io`进行`read`,`wirte`,`connect`,`bind`
+
+##### 作用
+- 进行`io`操作，`read`,`wirte`,`connect`,`bind`
+- 获取`io`状态，`isopen`,`isconnected`
+- 配置Channel相关配置信息`ChannelConfig`
+- 通过`channelPipeline`来处理所有的`ChannelHandlers`
+
+#### ChannelPipeline
+
+- 串联了一系列的`ChannelHandler`,处理获或者拦截channel的io读写事件，且是线程安全的，并且在添加自己的业务ChannleHandler的时候可以指定`EventExecutorGroup`，如果你处理器没有使用异步的话
+
+- `InboundChannel` : 只会拦截处理入站请求，channel读如数据
+- `OutboundCHannel` : 只会拦截出站请求，比较向Channel写出数据
+
+#### ChannelOption,ChannelConfig
+
+- ChannelOption是提供一些常量配置项
+
+- Attribute 可以在Channel中传递业务k-v
+
+- ChannelConfig是配置具体的Channel配置
+
+#### ChannelHandlerContext
+
+- 包含了ChannelHandler对象，实际上ChannelPipeline维护的就是ChannelHanlderContext的双向链表
+
+
+Channel
+ChannelPipeline : Channel创建的时候会创建ChannelPipeline.这两是一一对应的
+ChannelHandlerContext : ChannelPipeline包含ChannelHandlerContext的双向链表
+ChannelHandler ： ChannelHandlerContext包含ChannelHandler
+ChannelInitializer: 用来批量注册ChannelHandler，执行时机是在Channel创建的时候就会回调  
+
+
+Channel注册到哪儿去了？如何注册
+
+
+#### Netty线程模型
+
+- EventLoopGroup继承了EventExecutorGroup继承了ScheduledExecutorService
+    
+- EventLoop
+
+1.一个EventLoopGroup包含多个EventLoop
+2.一个EventLoop只包含一个Thread
+3.EventLoop上面绑定的所有IO事件都通过其中的线程执行
+4.一个Channel生命周期只会注册到一个EventLoop上
+5.一个EventLoop会被分配给一个或多个Channel 对应底层Nio一个Selector对应多个Channel
+
+这样做一个Channel的IO过程完全是单线程的，很好的避免了多线程并发
