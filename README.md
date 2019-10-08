@@ -176,3 +176,13 @@ Channel注册到哪儿去了？如何注册
 5.一个EventLoop会被分配给一个或多个Channel 对应底层Nio一个Selector对应多个Channel
 
 这样做一个Channel的IO过程完全是单线程的，很好的避免了多线程并发
+
+#### DirectBuffer 和 HeadBuffer
+
+DirectByteBuffer中有一个long类型的`address`字段来引用native堆中的引用，就可以直接进行io操作
+
+HeapByteBuffer在write的时候则需要将原来HeapBuffer中的数据拷贝到一个临时的DirectByteBuffer中，然后再去操作IO
+
+为什么和底层IO交互的时候必须使用directByteBuffer?
+- 因为调用底层io的系统层面读写需要传入的byte[]是内存稳定的，而HeapByteBuffer在Java堆中，会因为GC而移动地址引用会导致io读写失败
+
