@@ -12,12 +12,12 @@ import java.nio.channels.FileChannel;
  */
 public class MappedByteBufferTest {
     public static void main(String[] args) throws IOException {
-        RandomAccessFile randomAccessFile = new RandomAccessFile("mappedBuffer.txt", "rw");
-        FileChannel channel = randomAccessFile.getChannel();
+        RandomAccessFile accessFile = new RandomAccessFile("mappedBuffer.txt", "rw");
+        FileChannel channel = accessFile.getChannel();
         //获取文件的内存映射对象
         MappedByteBuffer buffer = channel.map(FileChannel.MapMode.READ_WRITE, 0, 5);
         buffer.put(0, (byte) 'a');
         buffer.put(1, (byte) 'a');
-        randomAccessFile.close();
+        accessFile.close();
     }
 }

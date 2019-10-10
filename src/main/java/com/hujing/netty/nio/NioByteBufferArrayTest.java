@@ -29,7 +29,6 @@ public class NioByteBufferArrayTest {
         buffers[1] = ByteBuffer.allocateDirect(3);
         buffers[2] = ByteBuffer.allocateDirect(4);
 
-
         for (; ; ) {
             long readLength = 0;
             //读满9个字节才跳出读循环

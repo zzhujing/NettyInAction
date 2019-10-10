@@ -50,6 +50,7 @@ public class NioSelectorTest {
         int[] ports = new int[]{5000, 5001, 5002, 5003};
 
         Selector selector = Selector.open();
+        //开启四个服务端
         for (int i = 0; i < ports.length; i++) {
             //开启服务端连接
             ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
