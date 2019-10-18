@@ -39,7 +39,7 @@ public class MyClient {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
-    public void sayHello(String username) {
+    public void sayHello(String usernchaelame) {
         MyRequest request = MyRequest.newBuilder().setUsername("hujing").build();
         MyResponse response = stub.getRealNameByUsername(request);
         System.out.println(response);
@@ -109,14 +109,10 @@ public class MyClient {
     public static void main(String[] args) throws InterruptedException {
         MyClient client = new MyClient("localhost", 50051);
         client.sayHello("hujing");
-
         System.out.println("========================");
-
         client.testStreamResponse("hujing");
         System.out.println("===========");
-
         client.testSreamRequest();
-
         System.out.println("====================");
         client.testTwoWayFlow();
     }

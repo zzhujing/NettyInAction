@@ -186,3 +186,32 @@ HeapByteBuffer在write的时候则需要将原来HeapBuffer中的数据拷贝到
 为什么和底层IO交互的时候必须使用directByteBuffer?
 - 因为调用底层io的系统层面读写需要传入的byte[]是内存稳定的，而HeapByteBuffer在Java堆中，会因为GC而移动地址引用会导致io读写失败
 
+
+
+#### Netty启动流程
+
+
+1.server启动 , 初始化main,sub两个线程组, selector等待客户端线程连接, 以及可动态调整处理io读写的ByteBuffer产生器 , 会初始化ServerSocketChannle并注册到Selector中阻塞等待客户端连接
+
+
+2. 初始化NioServerSocketChannle的时候,设置了该Channel的一些属性,比如感兴趣的SelectionKey,非阻塞等. 并且初始化了ChannelPipeline , 在初始化ChannelPipelin的时候,会初始化里面的ChannelHandlerContext双向链表(TailContext,HeadContext) , 最后初始化了可以获取可动态扩展的ByteBufAllocate
+
+3. 在init()初始化Channel的最后给pipeline.addLast()了一个ChannelInitializer , 
+
+------- 下面的会在完成注册的时候进行回调-----------------------------
+
+	- 这个组件的功能就是在对象的Handler完成注册(重点)然后回调HandlerAdded()方法中会回调其中的initialize()这时他会将我们配置的handler()方法的ChannelHandler添加到ChannelPipeline中 
+
+	- 同时将获取当前Channel所在的事件循环对象添加一个异步线程(Accepter)在handlerRead的时候将原来在Main Reactor(AbstractBootstrap中)创建的ServerSocketChannel交给Sub Reactor(ServerBootstrap)去执行read操作
+
+
+4. 从Main Reactor中使用ThreadChoose获取一个事件循环对象开始注册SingleThreadEventLoop#regiter(FutureProsime futurePromise) , 使用该事件循环对象和Channel对象构造一个FuturePromise开始调用在AbstraceUnsafe#register方法
+
+	- eventLoop.inEventLoop() 来判断该EventLoop是否是当前Channel所在线程来避免多线程访问一个Channel造成的读写并发问题
+	- 进入到AbstractChannel#register0方法,里面会将Channel注册到对应EventLoop中的Selector上
+	- 顺序回调PendingHandlerCallback的execute方法,从而回调初始化过程的ChannelInitialze方法添加自定义的业务处理器和启动Acceptor,其中我们自定义的ChannelInitializer会在addLast的时候立即按添加顺序得到执行,因为此时已经在注册状态 , 所有的Handler的HandlerAdded方法会得到回调
+	- 调用safeSetSuccess()方法使用FutureProsime的可写Future特性,且通过CAS的方式来通知所有的FutureListener注册已经完成
+	- 后面就是一系列ChannelHandler的回调
+
+
+5. 最后调用FuturePromise的方法进行阻塞等待服务器的启动完成

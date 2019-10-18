@@ -1,6 +1,5 @@
 plugins {
     id 'java'
-    id 'com.google.protobuf' version '0.8.8'
 }
 
 group 'com.hujing'
@@ -25,26 +24,3 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.6'
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
 }
-
-
-protobuf {
-    protoc {
-        artifact = "com.google.protobuf:protoc:3.9.0"
-    }
-    /* 指定gRPC基本生成的代码位置,基于项目根路径*/
-    generateProtoTasks.generatedFilesBaseDir = "src"
-    plugins {
-        grpc {
-            artifact = 'io.grpc:protoc-gen-grpc-java:1.23.0'
-        }
-    }
-    generateProtoTasks {
-        all()*.plugins {
-            grpc {
-                /* 修改ServiceGRPC文件的目录名称   grpc -> java*/
-                outputSubDir = "java"
-            }
-        }
-    }
-}
-

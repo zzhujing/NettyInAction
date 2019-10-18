@@ -26,7 +26,7 @@ public class TestHttpServerHandler extends SimpleChannelInboundHandler<HttpObjec
 
         if (msg instanceof HttpRequest) {
             HttpRequest httpRequest = (HttpRequest) msg;
-            System.out.println("request htto method : " + httpRequest.method().name());
+            System.out.println("request http method : " + httpRequest.method().name());
             String uri = httpRequest.uri();
             if (FAVICON_PATH.equals(uri)) {
                 System.out.println("request uri :" + uri);
