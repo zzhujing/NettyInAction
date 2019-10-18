@@ -7,6 +7,7 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
+import java.nio.channels.spi.SelectorProvider;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,16 +30,18 @@ public class NioChatServerTest {
         ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
         serverSocketChannel.bind(new InetSocketAddress(8899));
         serverSocketChannel.configureBlocking(false);
-        serverSocketChannel.accept();
         //2 构建Selector
         Selector selector = Selector.open();
         serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
 
         for (; ; ) {
 
-            //selector等待已经read的Channel
-            selector.select();
-
+            //selector会自动轮询所有注册在其上面的Channel，就绪就会加入到就绪列表中，而select()返回的就是相邻两次轮询之间的的就绪个数
+            //通过selector.poll0()方法通过操作系统返回
+            int readCount = selector.select();
+            //为0说明还没有Channel就绪
+            if (readCount == 0 ) continue;
+            //获取所有已经就绪的事件集合
             Set<SelectionKey> selectionKeys = selector.selectedKeys();
 
             selectionKeys.forEach(selectionKey -> {
