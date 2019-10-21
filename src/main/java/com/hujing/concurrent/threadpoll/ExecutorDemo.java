@@ -16,7 +16,6 @@ public class ExecutorDemo {
     }
 
     static class ThreadPreExecutor implements Executor{
-
         @Override
         public void execute(Runnable command) {
             new Thread(command).start();
