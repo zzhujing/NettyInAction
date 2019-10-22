@@ -8,9 +8,9 @@ public class LinkedListDemo {
         //2. 循环对比，若都相同则为回文串
 
         SingleLinkedList linkedList = new SingleLinkedList();
-        linkedList.add("1");
         linkedList.add("2");
-        linkedList.add("3");
+        linkedList.add("2");
+        linkedList.add("2");
         linkedList.add("2");
         linkedList.add("1");
         linkedList.foreach();
@@ -18,7 +18,6 @@ public class LinkedListDemo {
         System.out.println(linkedList.last);
         System.out.println("======flip=====");
         System.out.println(linkedList.checkBackToText());
-
     }
 
 
@@ -51,56 +50,38 @@ public class LinkedListDemo {
         }
 
         public boolean checkBackToText() {
-
-            if (head == null || head.next == null) return false;
-
-            //快慢指针获取中间节点
+            //1. 快慢指针获取中节点
+            if (head==null) throw new IllegalArgumentException("非法参数异常");
+            if (head.next==null) return true;
             Node slow = head;
             Node quick = head;
-
-            if (head.next.next == null && head.data.equals(head.next.data)) return true;
             while (quick.next != null && quick.next.next != null) {
                 slow = slow.next;
                 quick = quick.next.next;
             }
+            Node left = head;
 
-            Node left = null;
-            if (quick.next == null) {
-                //slow为中间节点
-                left = flip(slow);
-            } else {
-                //slow,quick为中间两节点
-                left = flip(slow.next);
-            }
-            Node next = slow.next;
-            while (left != null) {
-                if (left.data.equals(next.data)) {
+            //翻转后半节点部分，这里不需要区分奇数偶数，因为奇数的时候left和right中间多一个节点不需要判断所以翻转slow.next即可，偶数的时候直接翻转slow.next即可
+            Node right = flip(slow.next);
+            //2. 翻转后半部分节点
+            //3. 遍历比较，这里left和right节点肯定是一样多的。所以直接用right来判断
+            while (right!=null) {
+                if (left.data.equals(right.data)) {
                     left = left.next;
-                    continue;
+                    right = right.next;
+                }else {
+                    return false;
                 }
-                return false;
             }
             return true;
         }
 
         public Node flip(Node source) {
-            if (source == head) return head;
-            Node cur = head;
-            Node next = null;
+            if (source == null) throw new IllegalArgumentException("error argument");
+            if (source.next==null) return source;
+            Node cur = source;
             Node pre = null;
-            while (cur != source) {
-                next = cur.next;
-                cur.next = pre;
-                pre = cur;
-                cur = next;
-            }
-            return pre;
-        }
-
-        public Node flip() {
-            Node cur = head;
             Node next = null;
-            Node pre = null;
             while (cur != null) {
                 next = cur.next;
                 cur.next = pre;
